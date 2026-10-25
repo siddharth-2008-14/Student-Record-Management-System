@@ -262,6 +262,21 @@ case 5: {
     break;
 }
 
+            case 6: {
+                if (current_count == 0) {
+                    printf("No records available to calculate results.\n");
+                } else {
+                    printf("\n--- STUDENT SCORECARDS & RESULTS ---\n");
+                    for (int i = 0; i < current_count; i++) {
+                        printf("Roll: %d | Name: %s | Total: %d/300 | Percentage: %.2f%% | Grade: %c | Result: %s\n",
+                               s[i].roll, s[i].name, s[i].total, s[i].percentage, s[i].grade,
+                               (s[i].grade != 'F') ? "PASSED" : "FAILED");
+                    }
+                }
+                break;
+            }
+
+
 
 
             case 10:

@@ -276,6 +276,28 @@ case 5: {
                 break;
             }
 
+                        case 7: {
+                if (current_count == 0) {
+                    printf("No records available to determine the topper.\n");
+                } else {
+                    int max_marks = s[0].total;
+                    for (int i = 1; i < current_count; i++) {
+                        if (s[i].total > max_marks) {
+                            max_marks = s[i].total;
+                        }
+                    }
+                    printf("\n--- CLASS TOPPER(S) (%d/300 Marks) ---\n", max_marks);
+                    for (int i = 0; i < current_count; i++) {
+                        if (s[i].total == max_marks) {
+                            printf("Roll no: %d | Name: %s | Department: %s | Percentage: %.2f%%\n",
+                                   s[i].roll, s[i].name, s[i].department, s[i].percentage);
+                        }
+                    }
+                }
+                break;
+            }
+
+
 
 
 
